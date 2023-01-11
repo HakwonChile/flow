@@ -10,7 +10,12 @@ Via Composer
 $ composer require haneul-chile/flow
 ```
 
-## Usage
+Publicar el archivo de configuración
+```
+$ php artisan vendor:publish --provider="HaneulChile\Flow\FlowServiceProvider" --force
+```
+
+## Uso
 
 Para realizar una llamada GET debes usar el siguiente código.
 
@@ -22,7 +27,7 @@ $params = [
 $response = Flow::getFlow('/payment/getPayments', $params);
 ```
 
-Para realizar una llamada Post (por ejemplo un crear un pago) debes usar el siguiente código
+Para realizar una llamada Post (por ejemplo para crear un pago) debes usar el siguiente código
 
 ```
 $params = [
@@ -78,13 +83,13 @@ public function confirmation(Request $request)
     $response = Flow::getFlow('/payment/getStatus', $params);
 
     //Acá debes actualizar el pago en tu web como "pagado"
-    }
+}
 ```
 
-## Credits
+## Créditos
 
-- [Javier Cabrera Villegas]
+- Javier Cabrera Villegas
 
-## License
+## Licencia
 
-MIT. Please see the [license file](license.md) for more information.
+MIT.
