@@ -78,13 +78,13 @@ public function confirmation(Request $request)
     $response = Flow::getFlow('/payment/getStatus', $params);
 
     //Acá debes actualizar el pago en tu web como "pagado"
-    }
+}
 ```
 
-## Credits
+## Creditos
 
-- [Javier Cabrera Villegas]
+- Javier Cabrera Villegas
 
-## License
+## Licencia
 
 MIT. Please see the [license file](license.md) for more information.
