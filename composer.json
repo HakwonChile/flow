@@ -1,0 +1,40 @@
+{
+    "name": "haneul-chile/flow",
+    "description": "Paquete para la integración de Flow Chile en Laravel 9",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Javier Cabrera Villegas",
+            "email": "eiyuuchile@gmail.com",
+            "homepage": "https://twitter.com/4891redav"
+        }
+    ],
+    "homepage": "https://github.com/HakwonChile/flow",
+    "keywords": [
+        "Laravel",
+        "Flow"
+    ],
+    "require": {
+        "illuminate/support": "~9",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~7"
+    },
+    "autoload": {
+        "psr-4": {
+            "HaneulChile\\Flow\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HaneulChile\\Flow\\FlowServiceProvider"
+            ],
+            "aliases": {
+                "Flow": "HaneulChile\\Flow\\Facades\\Flow"
+            }
+        }
+    }
+}
